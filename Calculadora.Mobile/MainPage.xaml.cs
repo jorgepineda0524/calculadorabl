@@ -1,5 +1,4 @@
-﻿using Calculadora.Mobile.Class;
-
+﻿
 namespace Calculadora.Mobile
 {
     public partial class MainPage : ContentPage
@@ -74,14 +73,14 @@ namespace Calculadora.Mobile
 
         void Calculate(object sender, EventArgs e)
         {
-            if (state == 2)
-            {
-                var result2 = Calculator.Calculate(number1,number2,operation);
+            //if (state == 2)
+            //{
+            //    var result2 = Calculator.Calculate(number1,number2,operation);
 
-                this.resultado.Text = result2.ToString();
-                number1 = result2;
-                state = -1;
-            }
+            //    this.resultado.Text = result2.ToString();
+            //    number1 = result2;
+            //    state = -1;
+            //}
         }
     }
 }

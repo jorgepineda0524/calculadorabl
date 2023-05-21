@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.Mobile.MVVM.Views.CalculatorView"
+             Title="Calculator View">
+    <Grid
+        Padding="5,0"
+        ColumnSpacing="1"
+        RowSpacing="1"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.ColumnSpan="5"
+            BackgroundColor="White"
+            FontSize="40"
+            HorizontalTextAlignment="End"
+            LineBreakMode="NoWrap"
+            Text="{Binding OpMath}"
+            TextColor="Black"
+            VerticalTextAlignment="Center"
+            />
+        
+        <Label
+            Grid.Row="1"
+            Grid.ColumnSpan="4"
+            BackgroundColor="White"
+            FontSize="48"
+            HorizontalTextAlignment="End"
+            LineBreakMode="NoWrap"
+            Text="{Binding Result}"
+            TextColor="Orange"
+            VerticalTextAlignment="Center"
+            />
+
+        <Button 
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGrey"
+            Command="{Binding AddCommandClear}"
+            CornerRadius="0"
+            FontSize="36"
+            Text="C"
+            />
+
+        <Button 
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGrey"
+            Command="{Binding AddCommandClear}"
+            CornerRadius="0"
+            FontSize="36"
+            Text="C"
+            TextColor="DarkGrey"
+            />
+
+        <Button 
+            Grid.Row="2"
+            Grid.Column="2"
+            BackgroundColor="LightGrey"
+            Command="{Binding AddCommandDelete}"
+            CornerRadius="0"
+            FontSize="36"
+            Text="⌫"
+            TextColor="DarkGrey"
+            />
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            BackgroundColor="White"
+            Command="{Binding AddCommandNumber1}" CommandParameter="1"
+            CornerRadius="0"
+            FontSize="36"
+            Text="1"
+            TextColor="DarkGrey"
+            />
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            BackgroundColor="White"
+            Command="{Binding AddCommandNumber1}" CommandParameter="2"
+            CornerRadius="0"
+            FontSize="36"
+            Text="2"
+            TextColor="DarkGrey"
+            />
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            BackgroundColor="White"
+            Command="{Binding AddCommandNumber1}" CommandParameter="3"
+            CornerRadius="0"
+            FontSize="36"
+            Text="3"
+            TextColor="DarkGrey"
+            />
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            BackgroundColor="White"
+          Command="{Binding AddCommandNumber1}" CommandParameter="4"
+            CornerRadius="0"
+            FontSize="36"
+            Text="4"
+            TextColor="DarkGrey"
+            />
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+            BackgroundColor="White"
+       Command="{Binding AddCommandNumber1}" CommandParameter="5"
+            CornerRadius="0"
+            FontSize="36"
+            Text="5"
+            TextColor="DarkGrey"
+            />
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            BackgroundColor="White"
+          Command="{Binding AddCommandNumber1}" CommandParameter="6"
+            CornerRadius="0"
+            FontSize="36"
+            Text="6"
+            TextColor="DarkGrey"
+            />
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="0"
+            BackgroundColor="White"
+            Command="{Binding AddCommandNumber1}" CommandParameter="7"
+            CornerRadius="0"
+            FontSize="36"
+            Text="7"
+            TextColor="DarkGrey"
+            />
+        <Button
+            Grid.Row="5"
+            Grid.Column="1"
+            BackgroundColor="White"
+            Command="{Binding AddCommandNumber1}" CommandParameter="8"
+            CornerRadius="0"
+            FontSize="36"
+            Text="8"
+            TextColor="DarkGrey"
+            />
+        <Button
+            Grid.Row="5"
+            Grid.Column="2"
+            BackgroundColor="White"
+            Command="{Binding AddCommandNumber1}" CommandParameter="9"
+            CornerRadius="0"
+            FontSize="36"
+            Text="9"
+            TextColor="DarkGrey"
+            />
+
+        <Button
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Command="{Binding AddCommandNumber1}" CommandParameter="0"
+            CornerRadius="0"
+            FontSize="36"
+            Text="0"
+            TextColor="DarkGrey"
+            />
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="3"
+            BackgroundColor="Grey"
+            Command="{Binding AddCommandNumber1}" CommandParameter="/"
+            CornerRadius="0"
+            FontSize="36"
+            Text="/"
+            TextColor="DarkGrey"
+            />
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            BackgroundColor="Grey"
+            Command="{Binding AddCommandNumber1}" CommandParameter="*"
+            CornerRadius="0"
+            FontSize="36"
+            Text="*"
+            TextColor="DarkGrey"
+            />
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            BackgroundColor="Grey"
+            Command="{Binding AddCommandNumber1}" CommandParameter="-"
+            CornerRadius="0"
+            FontSize="36"
+            Text="-"
+            TextColor="DarkGrey"
+            />
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            BackgroundColor="Grey"
+            Command="{Binding AddCommandNumber1}" CommandParameter="+"
+            CornerRadius="0"
+            FontSize="36"
+            Text="+"
+            TextColor="DarkGrey"
+            />
+        <Button
+            Command="{Binding AddCommand}"
+            Grid.Row="6"
+            Grid.Column="3"
+            BackgroundColor="Grey"
+            CornerRadius="0"
+            FontSize="36"
+            Text="="
+            TextColor="DarkGrey"
+            />
+    </Grid>
+
+</ContentPage>

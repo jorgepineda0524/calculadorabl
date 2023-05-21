@@ -1,4 +1,6 @@
-﻿namespace Calculadora.Mobile
+﻿using Calculadora.Mobile.MVVM.Views;
+
+namespace Calculadora.Mobile
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new CalculatorView());
         }
     }
 }
